@@ -16,7 +16,7 @@ function AlbumsContainer({ albumsState }) {
 
         return (
             <div>
-                <h4 className="movies-container-header">POPULAR ALBUMS ON THE PLATFORM</h4>
+                <h4 className="albums-container-header">POPULAR ALBUMS ON THE PLATFORM</h4>
                 <div className="albums-container">
                     {allAlbums}
                 </div>
