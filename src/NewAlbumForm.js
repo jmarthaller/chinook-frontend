@@ -2,13 +2,11 @@ import React, { useState } from "react";
 
 function NewAlbumForm({ onAddAlbumToList }) {
   const [newAlbumTitle, setNewAlbumTitle] = useState("");
-//   const [newAlbumArtist, setNewAlbumArtist] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
     const newAlbumToPost = {
       title: newAlbumTitle,
-    //   musical_artist: newAlbumArtist,
       artist_id: 300,
     };
     const response = await fetch(`http://localhost:3001/albums`, {

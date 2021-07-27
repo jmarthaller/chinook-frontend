@@ -20,12 +20,17 @@ function App() {
     setAlbumsState([...albumsState, newAlbumToAdd])
   }
 
+  function onDeleteAlbum(id) {
+    const filteredAlbums = albumsState.filter(album => album.id !== id)
+    setAlbumsState(filteredAlbums)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Jacob Marthaller Hasura Assessment</h1>
         <NewAlbumForm onAddAlbumToList={onAddAlbumToList} />
-        <AlbumsContainter albumsState={albumsState} />
+        <AlbumsContainter albumsState={albumsState} onDeleteAlbum={onDeleteAlbum} />
       </header>
     </div>
   );

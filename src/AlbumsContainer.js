@@ -1,15 +1,18 @@
 import React from 'react';
 import AlbumsTile from './AlbumsTile';
 
-function AlbumsContainer({ albumsState }) {
+function AlbumsContainer({ albumsState, onDeleteAlbum }) {
 
 
         
             const allAlbums = albumsState.map((album) => {
                 return <AlbumsTile 
-                key={album.artist_id}
+                key={album.id}
+                id={album.artist_id}
+                artistId={album.artist_id}
                 title={album.title}
                 artist={album.musical_artist}
+                onDeleteAlbum={onDeleteAlbum}
                 />
             })
 
