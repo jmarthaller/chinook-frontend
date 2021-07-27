@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import AlbumsContainter from './AlbumsContainer';
+import NewAlbumForm from './NewAlbumForm';
 
 function App() {
   const [albumsState, setAlbumsState] = useState([])
@@ -15,10 +16,15 @@ function App() {
     fetchAlbumsOnLaunch();
   }, [])
 
+  function onAddAlbumToList(newAlbumToAdd) {
+    setAlbumsState([...albumsState, newAlbumToAdd])
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Jacob Marthaller Hasura Assessment</h1>
+        <NewAlbumForm onAddAlbumToList={onAddAlbumToList} />
         <AlbumsContainter albumsState={albumsState} />
       </header>
     </div>
