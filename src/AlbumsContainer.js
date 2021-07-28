@@ -8,7 +8,7 @@ function AlbumsContainer({ albumsState, onDeleteAlbum }) {
             const allAlbums = albumsState.map((album) => {
                 return <AlbumsTile 
                 key={album.id}
-                id={album.artist_id}
+                id={album.id}
                 artistId={album.artist_id}
                 title={album.title}
                 artist={album.musical_artist}

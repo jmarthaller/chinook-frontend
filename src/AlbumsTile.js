@@ -11,7 +11,6 @@ function AlbumsTile({ title, artist, id, onDeleteAlbum }) {
             "Content-Type": "application/json",
           },
         });
-        console.log(id)
         onDeleteAlbum(id);
       }
 

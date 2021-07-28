@@ -32,15 +32,15 @@ function NewAlbumForm({ onAddAlbumToList }) {
           placeholder="Title"
           onChange={(e) => setNewAlbumTitle(e.target.value)}
         />
-        {/* <br></br>
-        <input
+        <br></br>
+        {/* <input
           type="text"
           id="artist"
           value={newAlbumArtist}
           placeholder="Artist"
           onChange={(e) => setNewAlbumArtist(e.target.value)}
-        /> */}
-        <br></br>
+        />
+        <br></br> */}
         <input
           className="submit-new-album-btn"
           type="submit"
