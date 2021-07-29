@@ -3,8 +3,6 @@ import AlbumsTile from './AlbumsTile';
 
 function AlbumsContainer({ albumsState, onDeleteAlbum }) {
 
-
-        
             const allAlbums = albumsState.map((album) => {
                 return <AlbumsTile 
                 key={album.id}

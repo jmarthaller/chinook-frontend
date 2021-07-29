@@ -10,13 +10,15 @@ function NewAlbumForm({ onAddAlbumToList }) {
       artist_id: 300,
     };
     const response = await fetch(`http://localhost:3001/albums`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newAlbumToPost),
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+        },
+        body: JSON.stringify(newAlbumToPost),
     });
     const jsonify = await response.json();
+    console.log(jsonify)
     onAddAlbumToList(jsonify);
     e.target.reset();
   }
@@ -33,14 +35,6 @@ function NewAlbumForm({ onAddAlbumToList }) {
           onChange={(e) => setNewAlbumTitle(e.target.value)}
         />
         <br></br>
-        {/* <input
-          type="text"
-          id="artist"
-          value={newAlbumArtist}
-          placeholder="Artist"
-          onChange={(e) => setNewAlbumArtist(e.target.value)}
-        />
-        <br></br> */}
         <input
           className="submit-new-album-btn"
           type="submit"
