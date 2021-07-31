@@ -9,7 +9,6 @@ function AlbumsContainer({ albumsState, onDeleteAlbum }) {
                 id={album.id}
                 artistId={album.artist_id}
                 title={album.title}
-                artist={album.musical_artist}
                 onDeleteAlbum={onDeleteAlbum}
                 />
             })

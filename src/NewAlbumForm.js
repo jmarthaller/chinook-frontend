@@ -18,7 +18,6 @@ function NewAlbumForm({ onAddAlbumToList }) {
         body: JSON.stringify(newAlbumToPost),
     });
     const jsonify = await response.json();
-    console.log(jsonify)
     onAddAlbumToList(jsonify);
     e.target.reset();
   }
