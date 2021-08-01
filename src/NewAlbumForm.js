@@ -19,6 +19,7 @@ function NewAlbumForm({ onAddAlbumToList }) {
     });
     const jsonify = await response.json();
     onAddAlbumToList(jsonify);
+    setNewAlbumTitle("");
     e.target.reset();
   }
 
