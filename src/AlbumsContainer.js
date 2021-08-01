@@ -1,7 +1,7 @@
 import React from 'react';
 import AlbumsTile from './AlbumsTile';
 
-function AlbumsContainer({ albumsState, onDeleteAlbum }) {
+function AlbumsContainer({ albumsState, onDeleteAlbum, onUpdateAlbum }) {
 
             const allAlbums = albumsState.map((album) => {
                 return <AlbumsTile 
@@ -10,6 +10,7 @@ function AlbumsContainer({ albumsState, onDeleteAlbum }) {
                 artistId={album.artist_id}
                 title={album.title}
                 onDeleteAlbum={onDeleteAlbum}
+                onUpdateAlbum={onUpdateAlbum}
                 />
             })
 
