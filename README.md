@@ -1,6 +1,6 @@
 # Chinook Music App Frontend
 
-Runs as frontend with [this repo](https://github.com/jmarthaller/chinook-backend) for the backend.
+Frontend for Hasura chinook assessment. Run [this repo](https://github.com/jmarthaller/chinook-backend) for the backend.
 
 ## Available Scripts
 
